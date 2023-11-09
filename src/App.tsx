@@ -1,5 +1,10 @@
 import React from 'react'
-import BasicTypes from './typescript/BasicTypes'
+import Login from './components/Login'
+// import CounterHook from './components/CounterHook'
+// import Counter from './components/Counter'
+// import LiteralObjects from './typescript/LiteralObjects'
+// import Functions from './typescript/Functions'
+// //import BasicTypes from './typescript/BasicTypes'
 
 const App = () => {
   return (
@@ -8,7 +13,12 @@ const App = () => {
         Introduccion a Typescript
       </h1>
       <hr></hr>
-      <BasicTypes/>
+      {/*<BasicTypes/>*/}
+      {/*<LiteralObjects/>*/}
+      {/* <Functions/> */}
+      {/* <Counter></Counter> */}
+      {/* <CounterHook/> */}
+      <Login></Login>
     </div>
   )
 }
