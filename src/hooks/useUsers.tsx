@@ -17,16 +17,28 @@ const useUsers = () => {
         page: pageRef.current,
       },
     });
-    if (resp.data.data.length > 0) {
-      setUsers(resp.data.data);
-      console.log(pageRef)
-      pageRef.current++;
-    } else {
-      alert("No more data");
+    if(resp.data.data.length>0){
+        setUsers(resp.data.data);
+    }
+    else{
+        pageRef.current--;
+        alert("No more data");
     }
   };
 
-  return [users, loadUsers] as const
+  const nextPage = () => {
+    pageRef.current++;
+    loadUsers();
+  }
+
+  const prevPage = () => {
+    if(pageRef.current>1){
+        pageRef.current--;
+        loadUsers();
+    }
+  }
+
+  return [users, nextPage, prevPage] as const
 };
 
 export default useUsers;
