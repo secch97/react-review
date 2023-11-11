@@ -1,5 +1,6 @@
 import React from 'react'
 import Users from './components/Users'
+import Forms from './components/Forms'
 // import Login from './components/Login'
 // import CounterHook from './components/CounterHook'
 // import Counter from './components/Counter'
@@ -20,7 +21,8 @@ const App = () => {
       {/* <Counter></Counter> */}
       {/* <CounterHook/> */}
       {/* <Login></Login> */}
-      <Users/>
+      {/* <Users/> */}
+      <Forms></Forms>
     </div>
   )
 }
